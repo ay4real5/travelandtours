@@ -1,0 +1,7 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" fill="#FFF4E5"/>
+  <rect y="320" width="1200" height="380" fill="#31BFB3"/>
+  <path d="M0 389C143 334 219 416 349 389C503 357 560 259 730 283C856 301 982 386 1200 341V700H0V389Z" fill="#127D77"/>
+  <circle cx="986" cy="128" r="62" fill="#FFB067"/>
+  <text x="84" y="116" fill="#17202A" font-family="sans-serif" font-size="60" font-weight="700">Zanzibar Retreat</text>
+</svg>

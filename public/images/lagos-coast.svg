@@ -1,0 +1,7 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" fill="#F6EEE0"/>
+  <rect y="310" width="1200" height="390" fill="#2EA8A1"/>
+  <path d="M0 360C170 300 258 410 430 360C570 319 650 270 816 328C941 371 1043 350 1200 305V700H0V360Z" fill="#0F7D76"/>
+  <circle cx="934" cy="152" r="70" fill="#FF9F43"/>
+  <text x="84" y="116" fill="#17202A" font-family="sans-serif" font-size="60" font-weight="700">Lagos Coast Escape</text>
+</svg>

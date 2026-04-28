@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────── */
+:root {
+  /* Dark anchors */
+  --ink:        #0E0C0A;   /* warm near-black — hero, footer */
+  --charcoal:   #181310;   /* warm charcoal — CTA, marquee  */
+  --forest:     #0B1A0E;   /* deep forest green — philosophy */
+
+  /* Light surfaces */
+  --linen:      #F4EEE4;   /* warm cream — main content bg  */
+  --linen-alt:  #EDE6D9;   /* slightly deeper cream          */
+  --white:      #FFFFFF;
+
+  /* Cards */
+  --card-light: #FFFFFF;
+  --card-dark:  #1E1A16;
+
+  /* Borders */
+  --border-light: rgba(24,16,8,0.09);
+  --border-dark:  rgba(255,255,255,0.08);
+
+  /* Accent */
+  --gold:       #C08B28;
+  --gold-lt:    #DBA94A;
+
+  /* Text */
+  --pearl:      #F4EEE4;   /* light text on dark bg  */
+  --ink-text:   #1A130B;   /* dark text on light bg  */
+  --muted-lt:   #8A7E72;   /* muted on light bg      */
+  --muted-dk:   #7A7268;   /* muted on dark bg       */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background: var(--linen);
+  color: var(--ink-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), Georgia, serif;
+  line-height: 1.1;
+}
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
+.shell {
+  width: min(1280px, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+/* ─────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 2.4rem;
+  border-radius: 3px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-gold:hover {
+  background: var(--gold-lt);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(192,139,40,0.35);
+}
+
+/* Dark bg ghost */
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--pearl);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 2.4rem;
+  border-radius: 3px;
+  border: 1px solid rgba(244,238,228,0.3);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-outline-light:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Light bg outline */
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--ink-text);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 2.4rem;
+  border-radius: 3px;
+  border: 1px solid rgba(24,16,8,0.25);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-outline-dark:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────
+   TEXT UTILITIES
+───────────────────────────────────────── */
+.eyebrow-gold {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.tag-gold {
+  display: inline-block;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+}
+
+.gold-rule {
+  width: 36px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* ─────────────────────────────────────────
+   TOUR CARDS  — white, float on cream bg
+───────────────────────────────────────── */
+.tour-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-light);
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  transition: transform 0.35s cubic-bezier(0.22,0.61,0.36,1),
+              box-shadow 0.35s;
+  height: 100%;
+}
+.tour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(24,16,8,0.14);
+}
+.tour-card:hover .tour-card-img {
+  transform: scale(1.06);
+}
+
+.tour-card-photo {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 62%;
+}
+.tour-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22,0.61,0.36,1);
+}
+
+.tour-card-body {
+  flex: 1;
+  padding: 1.25rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-light);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────
+   MARQUEE
+───────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-wrap { overflow: hidden; }
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.marquee-inner:hover { animation-play-state: paused; }
+.marquee-item {
+  white-space: nowrap;
+  padding: 0 2.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pearl);
+}

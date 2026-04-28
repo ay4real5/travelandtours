@@ -1,0 +1,7 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" fill="#FFF6EA"/>
+  <rect y="345" width="1200" height="355" fill="#28988E"/>
+  <path d="M0 410L245 322L419 397L563 250L694 385L872 308L1030 376L1200 326V700H0V410Z" fill="#176D67"/>
+  <circle cx="932" cy="126" r="68" fill="#FFA34A"/>
+  <text x="84" y="116" fill="#17202A" font-family="sans-serif" font-size="60" font-weight="700">Dubai Luxury Week</text>
+</svg>
