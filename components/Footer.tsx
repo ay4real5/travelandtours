@@ -48,7 +48,7 @@ export default function Footer() {
             <p className="text-[0.63rem] font-bold uppercase tracking-[0.18em] mb-5" style={{ color: "var(--pearl)" }}>Contact</p>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="mailto:hello@babztravelsandtours.com" style={{ color: "rgba(244,238,228,0.45)" }} className="hover:text-[var(--gold)] transition-colors">
+                <a href="mailto:hello@babztravelsandtours.com" style={{ color: "rgba(244,238,228,0.45)", wordBreak: "break-word" }} className="hover:text-[var(--gold)] transition-colors">
                   hello@babztravelsandtours.com
                 </a>
               </li>

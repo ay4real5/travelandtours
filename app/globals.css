@@ -229,3 +229,88 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   color: var(--pearl);
 }
+
+/* ─────────────────────────────────────────
+   LEGACY COMPAT VARIABLES (booking/contact/tour-detail pages)
+───────────────────────────────────────── */
+:root {
+  --reef:   #1E6647;
+  --sea:    #217A52;
+  --muted:  #8A7E72;
+  --stroke: rgba(24,16,8,0.09);
+}
+
+/* ─────────────────────────────────────────
+   LAYOUT HELPERS
+───────────────────────────────────────── */
+.container-shell {
+  width: min(1280px, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+/* ─────────────────────────────────────────
+   GLASS CARD
+───────────────────────────────────────── */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px rgba(24,16,8,0.06);
+}
+
+/* ─────────────────────────────────────────
+   FORM CONTROLS
+───────────────────────────────────────── */
+.field-input {
+  width: 100%;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--ink-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.field-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(192,139,40,0.12);
+}
+
+/* ─────────────────────────────────────────
+   TOURS GRID — responsive row heights
+───────────────────────────────────────── */
+.tours-grid {
+  grid-auto-rows: 360px;
+}
+@media (min-width: 640px) {
+  .tours-grid {
+    grid-auto-rows: 420px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   MOBILE OVERRIDES  (< 640 px)
+───────────────────────────────────────── */
+@media (max-width: 639px) {
+  .shell,
+  .container-shell {
+    width: calc(100% - 2rem);
+  }
+
+  /* Tighten hero stats on small phones */
+  .hero-stats {
+    gap: 1.25rem !important;
+    margin-top: 2.5rem !important;
+    padding-top: 1.75rem !important;
+  }
+  .hero-stat-num {
+    font-size: 1.3rem !important;
+  }
+
+  /* Single-column tour card gets smaller photo ratio */
+  .tour-card-photo {
+    flex: 0 0 55%;
+  }
+}

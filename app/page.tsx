@@ -91,7 +91,7 @@ export default async function HomePage() {
           </div>
           {/* Stats */}
           <div
-            className="flex flex-wrap gap-10 mt-16 pt-10"
+            className="hero-stats flex flex-wrap gap-6 sm:gap-10 mt-10 sm:mt-16 pt-8 sm:pt-10"
             style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
           >
             {[
@@ -102,8 +102,8 @@ export default async function HomePage() {
             ].map((s) => (
               <div key={s.n}>
                 <p
-                  className="font-bold text-white"
-                  style={{ fontFamily: "var(--font-display), serif", fontSize: "1.75rem" }}
+                  className="hero-stat-num font-bold text-white"
+                  style={{ fontFamily: "var(--font-display), serif", fontSize: "clamp(1.3rem, 3.5vw, 1.75rem)" }}
                 >
                   {s.n}
                 </p>
@@ -234,10 +234,7 @@ export default async function HomePage() {
                 Browse All →
               </Link>
             </div>
-            <div
-              className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-              style={{ gridAutoRows: "420px" }}
-            >
+            <div className="tours-grid grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {tours.slice(1).map((t) => (
                 <TourCard key={t.id} tour={t} />
               ))}
@@ -251,7 +248,7 @@ export default async function HomePage() {
       ══════════════════════════════════════ */}
       <section className="py-28 md:py-36" style={{ background: "var(--forest)" }}>
         <div className="shell">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
               <p className="eyebrow-gold mb-6">Our Philosophy</p>
               <p

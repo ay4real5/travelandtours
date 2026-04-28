@@ -76,7 +76,7 @@ export default function Navbar() {
       {open && (
         <div
           className="md:hidden"
-          style={{ background: "rgba(8,8,8,0.97)", borderTop: "1px solid var(--border)", backdropFilter: "blur(20px)" }}
+          style={{ background: "rgba(8,8,8,0.97)", borderTop: "1px solid var(--border-dark)", backdropFilter: "blur(20px)" }}
         >
           <div className="shell py-6 flex flex-col gap-5">
             {[
